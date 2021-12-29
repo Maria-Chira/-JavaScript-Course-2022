@@ -271,4 +271,84 @@ if (hasDrivingLicense && hasGoodVision && !isTired) {
   console.log("Someone else should drive.");
 }
 
+
+
+//Switch Statement
+const day = "thursday";
+switch (day) {
+  case "monday": // day === 'Monday'
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+
+//if else syntax
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend");
+} else {
+  console.log("Not a valid day!");
+}
+
+
+
+//Statements and Expressions
+3 + 4; //expression because produce a value in JS
+1991; //expression
+true && false && !false; //expression because produce a boolean value;
+
+if (23 > 10) {
+  const str = "23 is bigger"; //statement => it performs some actions but doesn't produce a value
+}
+
+const me = "Maria";  //expression
+console.log(`I'm ${2037 - 1992} years old ${me}.`);
+\
+
+
+
+//The Conditional Operator == Ternary Operator
+const age = 15;
+age >= 18
+  ? console.log("I like to drink wine")
+  : console.log("I like to drink water");
+
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
 */
