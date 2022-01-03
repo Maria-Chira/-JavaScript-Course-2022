@@ -163,7 +163,7 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
   4.3. Call the function with the 'totals' array
 
 GOOD LUCK 😀
-*/
+
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
@@ -196,3 +196,6 @@ const calcAverage = function (arr) {
 };
 
 console.log(calcAverage(totals));
+
+
+*/
