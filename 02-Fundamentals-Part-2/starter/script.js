@@ -207,4 +207,115 @@ if (friends.includes("Maria")) {
 }
 
 
+
+
+//Objects
+
+const jonasArray = [
+  "Jonas",
+  "Doe",
+  2027 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+const jonasObject = {
+  firstName: "Maria",
+  lastName: "Chira",
+  age: 2027 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+
+
+
+//Dot vs Bracket Notation
+const maria = {
+  firstName: "Maria",
+  lastName: "Chira",
+  age: 2027 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log(maria);
+console.log(maria.lastName);
+console.log(maria["lastName"]);
+
+const nameKey = "Name";
+console.log(maria["first" + nameKey]);
+console.log(maria["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Maria? Choose between firstName, lastName, age, job and friends"
+);
+console.log(maria[interestedIn]);
+
+if (maria[interestedIn]) {
+  console.log(maria[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job and friends"
+  );
+}
+
+//adding new properties to the object
+maria.location = "Birmingham";
+maria["twitter"] = "@mariachira";
+console.log(maria);
+
+//Challenge
+// 'Maria has 3 friends and his best friend is called Michael.'
+
+const myBestFriend = `${maria.firstName} has ${maria.friends.length} friends and his best friend is called ${maria.friends[0]}.`;
+
+console.log(myBestFriend);
+
+
+
+
+//Objects Methods
+
+const maria = {
+  firstName: "Maria",
+  lastName: "Chira",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} years old ${
+      this.job
+    }, and she has ${this.hasDriversLicense ? "a" : "no"} driver's licence`;
+  },
+};
+
+console.log(maria.calcAge());
+
+console.log(maria.age);
+console.log(maria.age);
+console.log(maria.age);
+
+//Challenge
+//'Jonas is a 46 years old teacher and he has a driver's license.'
+
+console.log(maria.getSummary());
+
+
 */
